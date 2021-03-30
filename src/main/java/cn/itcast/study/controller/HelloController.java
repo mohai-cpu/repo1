@@ -30,6 +30,7 @@ public class HelloController {
     @ResponseBody   //@Controller注解时一定要加否则访问404
     public String sayHello(){
         logger.info("测试日志输出");
+        logger.info("nihao");
         int andIncrement = index.getAndIncrement();
         System.out.println(andIncrement);
         return "I miss you";
