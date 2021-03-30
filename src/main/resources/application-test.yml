@@ -1,7 +1,55 @@
 server:
-  port: 8083
+  port: 8089
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/cloud_user?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: mohai115087jing
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    database-platform: org.hibernate.dialect.MySQLDialect
+    database: MYSQL
+  redis:
+    host: localhost
+    port: 6379
+    password:
+    database: 0
+    lettuce:
+      pool:
+        max-active: 8
+        max-wait: -1
+        max-idle: 500
+  application:
+    name: springboot01
+#  rabbitmq:
+#    addresses: 10.154.9.107:5673,10.154.9.108:5673
+#    username: txx-content-center
+#    password: Qazxswtxx-content-center!
+#    virtualHost: life-insurance_1
+#    listener:
+#      simple:
+#        retry:
+#          max-attempts: 3
+#          enabled: true
+#          initial-interval: 2000
+#sftp:
+#  hostname: 10.0.155.55
+#  port: 22
+#  username: test
+#  password: test
+#  timeout: 6000
+#  privateKey:
+#  remotepath: /opt/bdepfile/bdp/tset
+#  localpath: /usr/local
+#  filenames: duebillInfo_%s.dat,repayInfo_%s.dat
 my:
   name: luoqing
   age: 22
   number: ${random.int}
+
+
+
 

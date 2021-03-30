@@ -1,11 +1,11 @@
 server:
-  port: 8080
+  port: 8088
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/j317?useUnicode=true&characterEncoding=utf8
+    url: jdbc:mysql://localhost:3306/cloud_user?useUnicode=true&characterEncoding=utf8
     username: root
-    password: 123
+    password: root
   jpa:
     hibernate:
       ddl-auto: none
@@ -22,17 +22,30 @@ spring:
         max-active: 8
         max-wait: -1
         max-idle: 500
-  sftp:
-    hostname: 10.0.155.55
-    port: 22
-    username: test
-    password: test
-    timeout: 6000
-    privateKey:
-    remotepath: /opt/bdepfile/bdp/tset
-    localpath: D:/core
-    filenames: duebillInfo_%s.dat,repayInfo_%s.dat
+#  rabbitmq:
+#    addresses: 10.154.9.107:5673,10.154.9.108:5673
+#    username: txx-content-center
+#    password: Qazxswtxx-content-center!
+#    virtualHost: life-insurance_1
+#    listener:
+#      simple:
+#        retry:
+#          max-attempts: 3
+#          enabled: true
+#          initial-interval: 2000
+#sftp:
+#  hostname: 10.0.155.55
+#  port: 22
+#  username: test
+#  password: test
+#  timeout: 6000
+#  privateKey:
+#  remotepath: /opt/bdepfile/bdp/tset
+#  localpath: D:/core
+#  filenames: duebillInfo_%s.dat,repayInfo_%s.dat
 my:
   name: luoqing
   age: 22
   number: ${random.int}
+
+
