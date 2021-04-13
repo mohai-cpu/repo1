@@ -24,6 +24,11 @@ spring:
         max-idle: 500
   application:
     name: springboot01
+
+
+filetest:
+  uploadurl: /home/zhangsan/filetest/upload
+  downloadurl: /home/zhangsan/filetest/download/imagefile
 #  rabbitmq:
 #    addresses: 10.154.9.107:5673,10.154.9.108:5673
 #    username: txx-content-center

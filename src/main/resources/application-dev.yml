@@ -22,6 +22,10 @@ spring:
         max-active: 8
         max-wait: -1
         max-idle: 500
+
+filetest:
+  uploadurl: D:\QMDownload
+  downloadurl: D:\QMDownload\Hotfix
 #  rabbitmq:
 #    addresses: 10.154.9.107:5673,10.154.9.108:5673
 #    username: txx-content-center
