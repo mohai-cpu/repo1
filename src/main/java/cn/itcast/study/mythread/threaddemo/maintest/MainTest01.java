@@ -1,6 +1,7 @@
 package cn.itcast.study.mythread.threaddemo.maintest;
 
 import cn.itcast.study.mythread.threaddemo.demotest.*;
+import com.alibaba.fastjson.JSONObject;
 
 public class MainTest01 {
     /*public static void main(String[] args) {
@@ -32,7 +33,7 @@ public class MainTest01 {
             thread04.start();
         }
     }*/
-    public static void main(String[] args) {
+   /* public static void main(String[] args) {
         try{
             Thread05 thread05 = new Thread05();
             thread05.setDaemon(true);
@@ -42,5 +43,13 @@ public class MainTest01 {
         }catch (Exception e){
             e.printStackTrace();
         }
+    }*/
+    public static void main(String[] args) {
+        String uri = "/aaa/b/ll";
+        String s = uri.replaceAll("f", "/");
+        System.out.println(s+"***************");
+        String[] split = uri.split("/");
+        System.out.println(split.length);
+        System.out.println(JSONObject.toJSONString(split));
     }
 }
