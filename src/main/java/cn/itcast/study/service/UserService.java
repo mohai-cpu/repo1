@@ -11,4 +11,5 @@ import cn.itcast.study.entity.User;
  */
 public interface UserService {
     public User findByUsername(String username);
+    public User setMyUser();
 }
