@@ -1,11 +1,15 @@
 server:
   port: 8089
+#  servlet:
+#    session:
+#      timeout: 30m
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/cloud_user?useUnicode=true&characterEncoding=utf8
+    url: jdbc:mysql://192.168.122.1:3306/cloud_user?useUnicode=true&characterEncoding=utf8
     username: root
-    password: mohai115087jing
+   # password: mohai115087jing
+    password: root
   jpa:
     hibernate:
       ddl-auto: none
@@ -13,7 +17,7 @@ spring:
     database-platform: org.hibernate.dialect.MySQLDialect
     database: MYSQL
   redis:
-    host: localhost
+    host: 127.0.0.1
     port: 6379
     password:
     database: 0
