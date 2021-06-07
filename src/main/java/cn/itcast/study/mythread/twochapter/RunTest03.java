@@ -1,5 +1,7 @@
 package cn.itcast.study.mythread.twochapter;
 
+import cn.itcast.study.controller.TokenController;
+
 public class RunTest03 {
     /*public static void main(String[] args) {
         try {
@@ -23,7 +25,7 @@ public class RunTest03 {
         thread20.setName("B");
         thread20.start();
     }*/
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         MyService4 service4 = new MyService4();
         TwoThread21 thread21 = new TwoThread21(service4);
         thread21.setName("a");
@@ -31,5 +33,39 @@ public class RunTest03 {
         TwoThread22 thread22 = new TwoThread22(service4);
         thread22.setName("b");
         thread22.start();
+    }*/
+   /* public static void main(String[] args) {
+        MyList myList = new MyList();
+        TwoThread23 thread23 = new TwoThread23(myList);
+        thread23.setName("A");
+        thread23.start();
+        TwoThread24 thread24 = new TwoThread24(myList);
+        thread24.setName("B");
+        thread24.start();
+    }*/
+   /* public static void main(String[] args) {
+        try {
+            MyOneList list = new MyOneList();
+            TwoThread25 thread25 = new TwoThread25(list);
+            thread25.setName("A");
+            thread25.start();
+            TwoThread26 thread26 = new TwoThread26(list);
+            thread26.setName("B");
+            thread26.start();
+            Thread.sleep(6000);
+            System.out.println("listSize="+list.getSize());
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }*/
+    public static void main(String[] args) {
+        MyService6 service6 = new MyService6();
+        MyObject object = new MyObject();
+        TwoThread27 thread27 = new TwoThread27(service6,object);
+        thread27.setName("a");
+        thread27.start();
+        TwoThread28 thread28 = new TwoThread28(service6,object);
+        thread28.setName("b");
+        thread27.start();
     }
 }
