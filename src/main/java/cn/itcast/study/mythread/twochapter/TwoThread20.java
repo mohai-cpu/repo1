@@ -9,6 +9,6 @@ public class TwoThread20 extends Thread{
 
     @Override
     public void run() {
-        service3.setUsernamePassword("b","bb");
+        service3.setUsernamePassword2("b","bb");
     }
 }

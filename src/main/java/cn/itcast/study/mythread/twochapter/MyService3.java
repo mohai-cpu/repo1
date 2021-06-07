@@ -18,4 +18,18 @@ public class MyService3 {
 
         }
     }
+    public void setUsernamePassword2(String username, String password) {
+        try {
+            String ss = new String();
+            synchronized (ss) {
+                System.out.println("线程名称为:" + Thread.currentThread().getName() + "在" + System.currentTimeMillis() + "进入同步快");
+                usernameParam = username;
+                Thread.sleep(3000);
+                passwordParam = password;
+                System.out.println("線程名稱為：" + Thread.currentThread().getName() + "在" + System.currentTimeMillis() + "离开同步块");
+            }
+        } catch (Exception e) {
+
+        }
+    }
 }

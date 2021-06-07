@@ -14,7 +14,7 @@ public class RunTest03 {
         }
 
     }*/
-    public static void main(String[] args) {
+   /* public static void main(String[] args) {
         MyService3 service3 = new MyService3();
         TwoThread19 thread19 = new TwoThread19(service3);
         thread19.setName("A");
@@ -22,5 +22,14 @@ public class RunTest03 {
         TwoThread20 thread20 = new TwoThread20(service3);
         thread20.setName("B");
         thread20.start();
+    }*/
+    public static void main(String[] args) {
+        MyService4 service4 = new MyService4();
+        TwoThread21 thread21 = new TwoThread21(service4);
+        thread21.setName("a");
+        thread21.start();
+        TwoThread22 thread22 = new TwoThread22(service4);
+        thread22.setName("b");
+        thread22.start();
     }
 }
