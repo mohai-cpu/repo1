@@ -58,7 +58,7 @@ public class RunTest03 {
             e.printStackTrace();
         }
     }*/
-    public static void main(String[] args) {
+   /* public static void main(String[] args) {
         MyService6 service6 = new MyService6();
         MyObject object = new MyObject();
         TwoThread27 thread27 = new TwoThread27(service6,object);
@@ -66,6 +66,55 @@ public class RunTest03 {
         thread27.start();
         TwoThread28 thread28 = new TwoThread28(service6,object);
         thread28.setName("b");
+        thread28.start();
+    }*/
+    /*public static void main(String[] args) {
+        MyService6 service6 = new MyService6();
+        MyObject object1 = new MyObject();
+        MyObject object2 = new MyObject();
+        TwoThread27 thread27 = new TwoThread27(service6,object1);
+        thread27.setName("a");
         thread27.start();
+        TwoThread28 thread28 = new TwoThread28(service6,object2);
+        thread28.setName("b");
+        thread28.start();
+    }*/
+   /* public static void main(String[] args) {
+        TwoThread29 thread29 = new TwoThread29();
+        thread29.setName("A");
+        thread29.start();
+        TwoThread30 thread30 = new TwoThread30();
+        thread30.setName("B");
+        thread30.start();
+    }*/
+    /*public static void main(String[] args) {
+        MyService8 service8 = new MyService8();
+        TwoThread31 a = new TwoThread31(service8);
+        a.setName("A");
+        a.start();
+        TwoThread32 b = new TwoThread32(service8);
+        b.setName("B");
+        b.start();
+        TwoThread32 c = new TwoThread32(service8);
+        c.setName("C");
+        c.start();
+    }*/
+    /*public static void main(String[] args) {
+        MyService9 service9 = new MyService9();
+        TwoThread34 a = new TwoThread34(service9);
+        a.setName("A");
+        a.start();
+        TwoThread35 b = new TwoThread35(service9);
+        b.setName("B");
+        b.start();
+    }*/
+    public static void main(String[] args) {
+        MyService10 service10 = new MyService10();
+        TwoThread36 thread36 = new TwoThread36(service10);
+        thread36.setName("A");
+        thread36.start();
+        TwoThread37 thread37 = new TwoThread37(service10);
+        thread37.setName("B");
+        thread37.start();
     }
 }
