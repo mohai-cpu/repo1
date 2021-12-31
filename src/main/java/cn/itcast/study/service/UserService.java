@@ -1,6 +1,8 @@
 package cn.itcast.study.service;
 
+import cn.itcast.study.dto.UserDto;
 import cn.itcast.study.entity.User;
+import cn.itcast.study.utils.ReturnResult;
 
 /**
  * @author Administrator
@@ -12,4 +14,5 @@ import cn.itcast.study.entity.User;
 public interface UserService {
     public User findByUsername(String username);
     public User setMyUser();
+    public ReturnResult saveUser();
 }

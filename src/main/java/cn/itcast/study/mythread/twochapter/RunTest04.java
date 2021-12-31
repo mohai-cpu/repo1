@@ -1,6 +1,11 @@
 package cn.itcast.study.mythread.twochapter;
 
 
+import org.apache.commons.lang3.StringUtils;
+
+import java.util.HashMap;
+import java.util.Map;
+
 public class RunTest04 {
     /*public static void main(String[] args) {
         try{
@@ -90,7 +95,7 @@ public class RunTest04 {
         Thread t5 = new Thread(countThread);
         t5.start();
     }*/
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         try{
             MyService11 service11 = new MyService11();
             TwoThread39[] thread39s = new TwoThread39[5];
@@ -104,6 +109,14 @@ public class RunTest04 {
             System.out.println(service11.atomicLong.get());
         }catch (Exception e){
             e.printStackTrace();
+        }
+    }*/
+    public static void main(String[] args) {
+        Map<String,String> map = new HashMap<>();
+        String name = map.get("name");
+        System.out.println(name);
+        if(StringUtils.isBlank(name)){
+            System.out.println("99999999999");
         }
     }
 }

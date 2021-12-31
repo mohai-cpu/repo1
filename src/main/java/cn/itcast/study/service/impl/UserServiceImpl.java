@@ -1,8 +1,12 @@
 package cn.itcast.study.service.impl;
 
+import cn.itcast.study.dao.MyUserDao;
 import cn.itcast.study.dao.UserDao;
+import cn.itcast.study.dto.UserDto;
+import cn.itcast.study.entity.MyUser;
 import cn.itcast.study.entity.User;
 import cn.itcast.study.service.UserService;
+import cn.itcast.study.utils.ReturnResult;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +25,8 @@ public class UserServiceImpl implements UserService {
     private Logger logger = LoggerFactory.getLogger(UserServiceImpl.class);
     @Autowired
     private UserDao userDao;
+    @Autowired
+    private MyUserDao myUserDao;
 
     @Override
     public User findByUsername(String username) {
@@ -38,5 +44,26 @@ public class UserServiceImpl implements UserService {
         }
         logger.info("setMyUser;");
         return myuser;
+    }
+
+    @Override
+    public ReturnResult saveUser() {
+        ReturnResult returnResult = new ReturnResult();
+        MyUser user = new MyUser();
+        user.setPhone("123");
+        user.setPwdd("666");
+        try {
+            myUserDao.save(user);
+        } catch (Exception e) {
+            logger.info("saveUser;数据库保存异常e:{}",e);
+            returnResult.setCode(2001);
+            return returnResult;
+        }
+        returnResult.setCode(2000);
+        return returnResult;
+    }
+    private String saveUserInfo(MyUser user) throws Exception{
+        myUserDao.save(user);
+        return "success";
     }
 }
